@@ -1,4 +1,4 @@
-package snedeker.lucene.practice.com.services;
+package snedeker.goetz.assignment1.services;
 
 import java.io.File;
 import java.io.IOException;

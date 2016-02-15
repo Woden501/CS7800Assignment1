@@ -1,4 +1,4 @@
-package snedeker.lucene.practice.com.utils;
+package snedeker.goetz.assignment1.utils;
 
 public class LuceneConstants {
 	public static final String CONTENTS="contents";

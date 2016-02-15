@@ -1,4 +1,4 @@
-package snedeker.lucene.practice.com.models;
+package snedeker.goetz.assignment1.models;
 
 public class EntryDocument {
 	private String docId;

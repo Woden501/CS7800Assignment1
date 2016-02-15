@@ -1,4 +1,4 @@
-package snedeker.lucene.practice.com.services;
+package snedeker.goetz.assignment1.services;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 
-import snedeker.lucene.practice.com.models.EntryDocument;
+import snedeker.goetz.assignment1.models.EntryDocument;
 
 public class IndexerService {
 

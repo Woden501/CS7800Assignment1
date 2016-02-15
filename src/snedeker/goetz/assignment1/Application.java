@@ -1,11 +1,11 @@
-package snedeker.lucene.practice.com;
+package snedeker.goetz.assignment1;
 
 import java.io.IOException;
 
 import org.apache.lucene.queryparser.classic.ParseException;
 
-import snedeker.lucene.practice.com.services.IndexerService;
-import snedeker.lucene.practice.com.services.QueryService;
+import snedeker.goetz.assignment1.services.IndexerService;
+import snedeker.goetz.assignment1.services.QueryService;
 
 public class Application {
 
