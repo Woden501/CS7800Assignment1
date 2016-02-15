@@ -31,20 +31,20 @@ public class QueryService {
 	
 	public void run() throws ParseException, IOException {
 		System.out.println("Enter your query: ");
+		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		String queryString = scanner.nextLine();
 		System.out.println("Your query is " + queryString);
-		scanner.close();
 
 		Query q = new QueryParser("content", analyzer).parse(queryString);
 
-		int hitsPerPage = 10;
+		int hitsPerPage = 9999;
 		IndexReader reader = DirectoryReader.open(index);
 		IndexSearcher searcher = new IndexSearcher(reader);
 		TopDocs docs = searcher.search(q, hitsPerPage);
 		ScoreDoc[] hits = docs.scoreDocs;
 
-		System.out.println("Found " + hits.length + " hits");
+		System.out.println("Found " + hits.length + " hits\n");
 		for (int i = 0; i < hits.length; ++i) {
 			int docId = hits[i].doc;
 			Document d = searcher.doc(docId);

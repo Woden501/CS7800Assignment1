@@ -46,7 +46,7 @@ public class IndexerService {
 	private ArrayList<EntryDocument> loadTexts() throws IOException {
 		ArrayList<EntryDocument> texts = new ArrayList<>();
 
-		File folder = new File(IndexerService.class.getResource("/snedeker/lucene/practice/com/resources").getPath());
+		File folder = new File(IndexerService.class.getResource("/snedeker/goetz/assignment1/resources").getPath());
 		File[] files = folder.listFiles();
 
 		for (File file : files) {
