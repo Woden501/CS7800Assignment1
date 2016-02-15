@@ -21,7 +21,8 @@ public class Application {
 		QueryService queryService;
 		try {
 			queryService = new QueryService();
-			queryService.run();
+			while (true)
+				queryService.run();
 		} catch (IOException | ParseException e) {
 			System.out.println("QueryService failed to complete: " + e);
 		}

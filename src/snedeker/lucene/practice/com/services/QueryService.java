@@ -2,6 +2,7 @@ package snedeker.lucene.practice.com.services;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Scanner;
 
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
@@ -29,7 +30,10 @@ public class QueryService {
 	}
 	
 	public void run() throws ParseException, IOException {
-		String queryString = "elements";
+		System.out.println("Enter your query: ");
+		Scanner scanner = new Scanner(System.in);
+		String queryString = scanner.nextLine();
+		System.out.println("Your query is " + queryString);
 
 		Query q = new QueryParser("content", analyzer).parse(queryString);
 
@@ -45,5 +49,6 @@ public class QueryService {
 			Document d = searcher.doc(docId);
 			System.out.println((i + 1) + ". " + d.get("title"));
 		}
+		System.out.println("");
 	}
 }
