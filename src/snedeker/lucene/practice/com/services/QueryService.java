@@ -34,6 +34,7 @@ public class QueryService {
 		Scanner scanner = new Scanner(System.in);
 		String queryString = scanner.nextLine();
 		System.out.println("Your query is " + queryString);
+		scanner.close();
 
 		Query q = new QueryParser("content", analyzer).parse(queryString);
 
